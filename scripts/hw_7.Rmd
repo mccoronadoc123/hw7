@@ -1,0 +1,31 @@
+---
+title: "hw_7"
+author: "Haitham Anbar, Tram Anh Hoang, Erick Njue, Maria Coronado"
+output: pdf_document
+date: "2022-11-05"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.width = 6.5, fig.height = 8)
+
+library(here)
+library(rio)
+library(readr)
+library(janitor)
+library(tidyverse)
+
+
+star <- import(here("data", "star.csv")) %>% 
+  clean_names()
+view(star)
+
+```
+
+
+## Commit
+
+```{r}
+
+
+```
+
