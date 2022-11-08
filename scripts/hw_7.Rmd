@@ -5,8 +5,10 @@ output: pdf_document
 date: "2022-11-05"
 ---
 
+# Commit 1
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, fig.width = 6.5, fig.height = 8)
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, fig.width = 6.5, fig.height = 8)
 
 library(here)
 library(rio)
@@ -16,15 +18,28 @@ library(tidyverse)
 
 
 star <- import(here("data", "star.csv")) %>% 
-  clean_names()
+  clean_names() %>%
+  as_tibble()
+  
 view(star)
 
 ```
 
 
-## Commit
+# Commit 4
 
-```{r}
+```{r plot}
+star %>%
+  ggplot(aes(totexp,tmathss)) +
+  geom_point(color="gray", size=1) +
+  geom_smooth(method=lm,aes(color=frl)) +
+  theme_set(theme_minimal()) +
+  theme(legend.position = "bottom") +
+  labs(title="Relation between teacher experience and math scores",
+       subtitle = "Separate regression lines displayed by free/reduced price lunch status",
+       x="Teacher Experience (years)",
+       y="Total Math Scale Score") +
+  scale_color_discrete(guide=guide_legend(reverse=TRUE), name="Lunch status", labels = c("Paid meals", "Free/Reduced Price Meals"))
 
 
 ```
