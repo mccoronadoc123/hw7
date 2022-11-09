@@ -3,9 +3,12 @@ title: "hw_7"
 author: "Haitham Anbar, Tram Anh Hoang, Erick Njue, Maria Coronado"
 output: pdf_document
 date: "2022-11-05"
+bibliography: lab7refs.bib
 ---
 
 # Commit 1
+
+See setup chunk in Rmd document.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message=FALSE, fig.width = 6.5, fig.height = 8)
@@ -15,6 +18,7 @@ library(rio)
 library(readr)
 library(janitor)
 library(tidyverse)
+library(tinytex)
 
 
 star <- import(here("data", "star.csv")) %>% 
@@ -24,6 +28,11 @@ star <- import(here("data", "star.csv")) %>%
 view(star)
 
 ```
+
+
+# Commit 2
+
+These are 2 citations with (Author, year) [@young2021does; @issa2011absenteeism] followed by one more citation, [@pani2016absenteeism] and a final citation with Author (year) here @garcia2018student.
 
 
 # Commit 4
@@ -43,4 +52,10 @@ star %>%
 
 
 ```
+
+
+\newpage
+
+# References
+
 
