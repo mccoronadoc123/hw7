@@ -19,6 +19,7 @@ library(readr)
 library(janitor)
 library(tidyverse)
 library(tinytex)
+library(knitr)
 
 star <- import(here("data", "star.csv")) %>% 
   clean_names() %>%
