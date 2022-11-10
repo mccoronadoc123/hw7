@@ -20,7 +20,6 @@ library(janitor)
 library(tidyverse)
 library(tinytex)
 
-
 star <- import(here("data", "star.csv")) %>% 
   clean_names() %>%
   as_tibble()
@@ -36,7 +35,8 @@ These are 2 citations with (Author, year) [@young2021does; @issa2011absenteeism]
 
 # Commit 3
 ```{r table-described}
-scores <- star %>% group_by(sex,frl) %>% summarise(math_mean = mean(tmathss),math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss))
+scores <- star %>% group_by(sex,frl) %>% summarise(math_mean = mean(tmathss),math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss)) %>% 
+  kable(digits = 2, col.names = c("sex", "frl", "math_mean", "math_sd", "rdg_mean", "rdg_sd"), align = "c", padding = 100)
 scores
 ```
 
