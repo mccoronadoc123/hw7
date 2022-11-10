@@ -38,10 +38,9 @@ These are 2 citations with (Author, year) [@young2021does; @issa2011absenteeism]
 ```{r table-described}
 scores <- star %>% group_by(sex,frl) %>% summarise(math_mean = mean(tmathss),math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss))
 scores
-
-# scores demonstrates the mean scores and standard deviations of math and reading tests administered to children. It is separated by gender and whether or not the child is on the free or reduced lunch program(FRL)  
 ```
 
+Scores demonstrates the mean scores and standard deviations of math and reading tests administered to children. It is separated by gender and whether or not the child is on the free or reduced lunch program(FRL) 
 
 # Commit 4
 
@@ -58,9 +57,9 @@ star %>%
        y="Total Math Scale Score") +
   scale_color_discrete(guide=guide_legend(reverse=TRUE), name="Lunch status", labels = c("Paid meals", "Free/Reduced Price Meals"))
 
-
 ```
 
+The graph demonstrates the relationship between students' math scores and teacher's experience. Students who are on free/reduced school lunch (i.e. are from lower-income families) tend to have lower score than those who have paid meals even when their teacher has the same years of experience.
 
 \newpage
 
