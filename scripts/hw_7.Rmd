@@ -36,12 +36,12 @@ These are 2 citations with (Author, year) [@young2021does; @issa2011absenteeism]
 
 # Commit 3
 ```{r table-described}
-scores <- star %>% group_by(sex,frl) %>% summarise(math_mean = mean(tmathss),math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss))
+scores <- star %>% group_by(sex,frl) %>% summarise(math_mean = mean(tmathss),math_sd = sd(tmathss), rdg_mean = mean(treadss), rdg_sd = sd(treadss)) %>% 
+  kable(digits = 2, col.names = c("sex", "frl", "math_mean", "math_sd", "rdg_mean", "rdg_sd"), align = "l")
 scores
 
 # scores demonstrates the mean scores and standard deviations of math and reading tests administered to children. It is separated by gender and whether or not the child is on the free or reduced lunch program(FRL)  
 ```
-
 
 # Commit 4
 
