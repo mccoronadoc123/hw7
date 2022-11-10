@@ -32,7 +32,10 @@ view(star)
 
 # Commit 2
 
-These are 2 citations with (Author, year) [@young2021does; @issa2011absenteeism] followed by one more citation, [@pani2016absenteeism] and a final citation with Author (year) here @garcia2018student.
+These are 5 article citations with (Author, year) [@young2021does; @issa2011absenteeism; @liebowitz2019; @hill2022 ; @keenan2011myth] followed by one more citation, [@pani2016absenteeism] and a final citation with Author (year) here @garcia2018student. 
+
+Further, we have cited one book publication [@shapiro2011models]. @shapiro2011models is very interesting book.
+
 
 # Commit 3
 ```{r table-described}
